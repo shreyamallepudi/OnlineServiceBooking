@@ -230,7 +230,7 @@ Configured to allow requests from `http://localhost:4200`
 
 ## 📝 License
 
-This project is for educational purposes. Feel free to use and modify.
+This project is for educational purpose.
 
 ## 🤝 Contributing
 
@@ -241,7 +241,5 @@ This project is for educational purposes. Feel free to use and modify.
 5. Open a Pull Request
 
 ---
-
-Built with ❤️ for learning full-stack development with Spring Boot, Angular, and NG-Zorro.
 
 
