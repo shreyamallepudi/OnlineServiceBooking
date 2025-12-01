@@ -1,0 +1,276 @@
+// Custom Theme Variables
+:root {
+  // Primary brand colors - Deep teal/emerald theme
+  --primary-50: #e6fff7;
+  --primary-100: #b3ffe8;
+  --primary-200: #80ffd9;
+  --primary-300: #4dffc9;
+  --primary-400: #1affba;
+  --primary-500: #00e6a0;
+  --primary-600: #00b380;
+  --primary-700: #008060;
+  --primary-800: #004d3a;
+  --primary-900: #001a14;
+  
+  // Accent colors - Coral/Sunset
+  --accent-500: #ff6b6b;
+  --accent-600: #ee5a5a;
+  
+  // Neutral colors
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  
+  // Gradients
+  --gradient-primary: linear-gradient(135deg, #00b380 0%, #00d9a0 50%, #00ffb3 100%);
+  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #1a2f4a 50%, #0d3d4d 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(0, 230, 160, 0.15) 0%, transparent 50%);
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 40px rgba(0, 230, 160, 0.3);
+  
+  // Border radius
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fafafa;
+  color: var(--neutral-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--neutral-900);
+}
+
+h1 { font-size: 3.5rem; font-weight: 700; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
+
+// NG-Zorro Overrides
+.ant-btn-primary {
+  background: var(--gradient-primary) !important;
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 600 !important;
+  height: auto !important;
+  padding: 12px 28px !important;
+  font-size: 15px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 14px rgba(0, 179, 128, 0.4) !important;
+  
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 179, 128, 0.5) !important;
+  }
+  
+  &:active {
+    transform: translateY(0) !important;
+  }
+}
+
+.ant-btn-default {
+  border-radius: var(--radius-md) !important;
+  border-color: var(--neutral-200) !important;
+  height: auto !important;
+  padding: 12px 28px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    border-color: var(--primary-500) !important;
+    color: var(--primary-600) !important;
+  }
+}
+
+.ant-card {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--neutral-100) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  
+  &:hover {
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-4px);
+  }
+}
+
+.ant-input, .ant-select-selector, .ant-picker {
+  border-radius: var(--radius-md) !important;
+  border-color: var(--neutral-200) !important;
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+  transition: all 0.2s ease !important;
+  
+  &:focus, &:hover {
+    border-color: var(--primary-500) !important;
+    box-shadow: 0 0 0 3px rgba(0, 179, 128, 0.1) !important;
+  }
+}
+
+.ant-select-selector {
+  height: auto !important;
+  min-height: 48px !important;
+}
+
+.ant-menu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ant-rate-star-full .anticon-star {
+  color: #fbbf24 !important;
+}
+
+.ant-tag {
+  border-radius: var(--radius-full) !important;
+  padding: 4px 16px !important;
+  font-weight: 500 !important;
+  border: none !important;
+}
+
+.ant-modal-content {
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  border-bottom: none !important;
+  padding: 24px 24px 0 !important;
+}
+
+.ant-modal-body {
+  padding: 24px !important;
+}
+
+// Custom utility classes
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--neutral-400);
+  }
+}
+
+// Selection color
+::selection {
+  background: var(--primary-200);
+  color: var(--primary-900);
+}
+

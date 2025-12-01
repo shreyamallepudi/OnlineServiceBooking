@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: service-booking-api
+  
+  datasource:
+    url: jdbc:h2:mem:service_booking;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+  
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+
+jwt:
+  secret: 7f3c8e2a9b5d4f1e6a0c3b8d7e2f5a9c4b1d6e8f3a0c5b2d7e4f1a6c9b3d8e2f
+  expiration: 86400000
+
+logging:
+  level:
+    com.servicebooking: DEBUG
+    org.springframework.security: DEBUG
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
